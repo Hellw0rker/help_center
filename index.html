@@ -104,7 +104,29 @@
                 </p>
             </h1>
             <p>
-                Номер карти: 
+                Номер карти (Гривні):
+                <span class="text_copy_GR">5167803000012828
+                    <button style="border-radius: 9px; border: 1px solid rgb(201, 196, 196);">
+                        <img src="img/copy.png" width="13px">
+                    </button>
+                </span>
+            </p>
+            <script>
+                jQuery(document).ready(function($){
+                $('.text_copy_GR').click(function() {
+                var $text_copy = $(this);
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($text_copy.text()).select();
+                document.execCommand("copy");
+                $temp.remove();
+                $('.copy_link_mess').fadeIn(400);
+                setTimeout(function(){$('.copy_link_mess').fadeOut(400);},5000);
+                });
+                });
+                </script>
+            <p>
+                Номер карти (Євро): 
                 <span class="text_copy_link">4790 7000 1652 0414 <button style="border-radius: 9px; border: 1px solid rgb(201, 196, 196);">
                         <img src="img/copy.png" width="13px">
                     </button>
